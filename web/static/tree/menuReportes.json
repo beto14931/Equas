@@ -1,0 +1,21 @@
+{
+    "text": ".",
+    "children": [
+                {
+                    "id": "",
+                    "text": "1. Reporte de Parametros ",
+                    "iconCls": "task",
+                    "leaf": true
+                },{
+                    "id": "",
+                    "text": "2. Reporte de Control de Ordenes",
+                    "iconCls": "task",
+                    "leaf": true
+                },{
+                    "id": "",
+                    "text": "3. Reporte de Control de Correccion de Datos",
+                    "iconCls": "task",
+                    "leaf": true
+                }
+    ]
+}

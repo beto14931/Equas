@@ -1,0 +1,337 @@
+//Ext.Loader.setConfig({enabled: true});
+Ext.Loader.setPath('Ext.ux', 'web/lib/extjs4/examples/ux');
+Ext.require([
+	'Ext.Container',
+    'Ext.tip.QuickTipManager',
+    'Ext.container.Viewport',
+    'Ext.layout.*',
+    'Ext.form.Panel',
+    'Ext.button.Button',
+    'Ext.form.field.File',
+    'Ext.form.Label',
+    'Ext.grid.*',
+    'Ext.data.*',
+    'Ext.selection.*',
+    'Ext.tab.Panel',
+    //'Ext.ux.layout.Center',
+    'Ext.ux.statusbar.StatusBar',
+    //'Ext.ux.RowExpander',
+    'Ext.toolbar.Paging',
+    'Ext.ModelManager',
+    'Ext.panel.*',
+    'Ext.toolbar.*',
+    'Ext.button.*',
+    'Ext.container.ButtonGroup',
+    'Ext.layout.container.Table',
+    'Ext.dd.*',
+    'Ext.tree.*'
+    //'Ext.ux.grid.FiltersFeature',
+	//'Ext.ux.form.field.BoxSelect',
+    //'Ext.selection.CellModel',
+    //'Ext.ux.CheckColumn'
+        
+]);
+
+Ext.onReady(function(){ 
+    Ext.tip.QuickTipManager.init();
+	var detailEl;
+		
+	var pnlNoticias = {
+		xtype: 'tabpanel',
+		id: 'todo-tab-panel',
+		plain: true,
+		activeTab: 0,
+		autoDestroy: false,
+		closeAction:'hide',
+		//style: 'background-color:#dfe8f6; ',
+		style: 'background-color:#dfe8f6; ',
+		defaults: {bodyStyle: 'padding:15px'},
+		items:[{
+			title: 'Noticias',
+			bodyStyle: 'background-color:#fff; ',
+			html: '<div id="start-div">'+
+						'<div style="margin-left:20px;margin-top:20px;">'+
+							//'<h2>Bienvenido a la Plataforma TodoClass</h2>'+
+							//'<p>Plantilla para TodoClass Módulo Básico.</p>'+
+						'</div>'+
+					'</div>'
+		}]
+	}
+	
+	var contentPanel = {
+         id: 'content-panel',
+         region: 'center',
+         layout: 'card',
+         margins: '2 5 5 0',
+         activeItem: 0,
+         border: false,
+         items: pnlNoticias
+    };
+
+    Ext.define('Todoclass.Global', {
+        singleton: true,
+        user: 'rmelgarejo',
+    	tipo_producto: ''
+    });      
+
+    Ext.define('Todoclass.view.layout.tree', {
+	    extend: 'Ext.tree.Panel',
+
+	    requires: [
+	        'Ext.data.TreeStore'
+	    ],
+	    xtype: 'check-tree',
+	    rootVisible: false,
+	    useArrows: true,
+	    title: 'Operaciones',
+	    width: 250,
+	    height: 300,	    
+	    
+	    initComponent: function() {
+			Ext.apply(this, {
+            	tbar: [{
+                	text: 'Expandir',
+                	scope: this,
+                	handler: this.onCheckedNodesClick
+            	}]
+        	});
+        	this.callParent();
+	    },	
+
+	    /*onCheckedNodesClick: function(){
+	        var records = this.getView().getChecked(),
+	            names = [];
+	                   
+	        Ext.Array.each(records, function(rec){
+	            names.push(rec.get('text'));
+	        });
+	                    
+	        Ext.MessageBox.show({
+	            title: 'Selected Nodes',
+	            msg: names.join('<br />'),
+	            icon: Ext.MessageBox.INFO
+	        });
+	    }*/
+	    listeners: {
+            select: function(selModel, record) {
+                if (record.get('leaf')) {
+                    addNewTab('todo-tab-panel', record.getId(), record.data.text);
+                }
+            }
+        }
+
+	});
+
+	var menuTree1 = Ext.create('Todoclass.view.layout.tree',{
+		title:'Módulo de Lote',
+		store: new Ext.data.TreeStore({
+	                proxy: {
+	                    type: 'ajax',
+	                    url: 'web/static/tree/menuRegistro.json'
+	                },
+	                sorters: [{
+	                    property: 'leaf',
+	                    direction: 'ASC'
+	                }, {
+	                    property: 'text',
+	                    direction: 'ASC'
+	                }]
+            	}),
+	});
+
+	var menuTree2 = Ext.create('Todoclass.view.layout.tree',{
+		title:'Módulo de Hoja de Ensayo',
+            	store: new Ext.data.TreeStore({
+	                proxy: {
+	                    type: 'ajax',
+	                    url: 'web/static/tree/menuHojaEnsayo.json'
+	                },
+	                sorters: [{
+	                    property: 'leaf',
+	                    direction: 'ASC'
+	                }, {
+	                    property: 'text',
+	                    direction: 'ASC'
+	                }]
+            	})
+	});
+
+	var menuTree3 = Ext.create('Todoclass.view.layout.tree',{
+		title:'Módulo de Informe de Ensayo',
+            	store: new Ext.data.TreeStore({
+	                proxy: {
+	                    type: 'ajax',
+	                    url: 'web/static/tree/menuInformeEnsayo.json'
+	                },
+	                sorters: [{
+	                    property: 'leaf',
+	                    direction: 'ASC'
+	                }, {
+	                    property: 'text',
+	                    direction: 'ASC'
+	                }]
+            	})
+	});
+	var menuTree4 = Ext.create('Todoclass.view.layout.tree',{
+		title:'Módulo de Reportes',
+            	store: new Ext.data.TreeStore({
+	                proxy: {
+	                    type: 'ajax',
+	                    url: 'web/static/tree/menuReportes.json'
+	                },
+	                sorters: [{
+	                    property: 'leaf',
+	                    direction: 'ASC'
+	                }, {
+	                    property: 'text',
+	                    direction: 'ASC'
+	                }]
+            	})
+	});
+	var menuTree5 = Ext.create('Todoclass.view.layout.tree',{
+		title:'Módulo de Administración',
+            	store: new Ext.data.TreeStore({
+	                proxy: {
+	                    type: 'ajax',
+	                    url: 'web/static/tree/menuAdministracion.json'
+	                },
+	                sorters: [{
+	                    property: 'leaf',
+	                    direction: 'ASC'
+	                }, {
+	                    property: 'text',
+	                    direction: 'ASC'
+	                }]
+            	})
+	});
+
+	/*
+	var menuTree6 = Ext.create('Todoclass.view.layout.tree',{
+		title:'Módulo de Administración'
+	});	
+	var menuTree7 = Ext.create('Todoclass.view.layout.tree',{
+		title:'Módulo de Reportes'
+	});	*/
+
+
+
+
+    var leftPanel = Ext.define('Todoclass.view.layout.Accordion', {
+	    extend: 'Ext.panel.Panel',
+	    requires: [
+	        'Ext.layout.container.Accordion'
+	    ],
+	    xtype: 'layout-accordion',
+	    layout: 'accordion',
+	    region: 'west',
+	    split: true,
+	    width: 250,
+	    
+	    initComponent: function() {
+
+	        Ext.apply(this, {
+	            items: [ 
+	            	menuTree1, 
+	            	menuTree2, 
+	            	menuTree3, 
+	            	menuTree4, 
+	            	menuTree5
+	            ]
+	        });
+	        this.callParent();
+	    }
+	});
+	
+	var headerPanel = {
+        id: 'header-panel',
+        region: 'north',
+        layout: 'fit',
+        autoScroll: false,
+        height: 74,
+        border: false,
+        items:[{
+            xtype: 'panel',
+            layout: 'anchor',
+            border: false,
+            padding:0,
+            //bodyStyle:'background:#323232;',
+            bodyStyle:'background:#ffffff;',
+            html:' ',
+            id: 'pnlBuscadorss',
+            items: [{
+                xtype: 'panel',
+                border: false,
+                padding:1,
+                bodyStyle:'background:#ffffff;',
+                html: '<img src="web/static/img/logoHead1.png" />',
+                width: 280,
+                height: 70,
+                id: 'pnlLogo'
+            },{
+                xtype: 'panel',
+                border: false,
+                padding:0,
+                bodyStyle:'background:#323232;',
+                width: 280,
+                height: 80,
+                id: 'pnlTareas'
+            }]
+        }]
+    };
+  
+    Ext.create('Ext.Viewport', {
+        layout: 'border',
+        items: [
+        	headerPanel, 
+        	leftPanel,
+            {
+	            layout: 'fit',
+	            id: 'layout-status',
+	            region:'south',
+	            height:28,
+	            border:false,
+	            bbar: Ext.create('Ext.ux.StatusBar', {
+	                id: 'basic-statusbar',
+	                defaultText: 'Bienvenido al SMG.',
+	                defaultIconCls: 'default-icon',
+	                text: '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Plataforma EQUAS.',
+	                iconCls: 'check_ok',
+	                items: [
+	                    {
+	                        xtype: 'button',
+							id: 'btnUsuario',
+	                        text: '',
+	                        iconCls: 'user',
+	                        handler: function (){
+	                            var sb = Ext.getCmp('basic-statusbar');
+	                            sb.setStatus({
+	                                text: '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Usuario activo: admin / Cargo: Administrador.',
+	                                iconCls: 'info',
+	                                clear: true
+	                            });
+	                        }
+	                    },'-',
+	                    {
+	                        xtype: 'button',
+	                        text: 'Servidor: SMGDB',
+	                        iconCls: 'global',
+	                        handler: function (){
+	                            var sb = Ext.getCmp('basic-statusbar');
+	                            sb.setStatus({
+	                                text: '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Servidor de aplicacion: .',
+	                                iconCls: 'info',
+	                                clear: true
+	                            });
+	                            //var sb = Ext.getCmp('basic-statusbar');
+	                            // Set the status bar to show that something is processing:
+	                            //sb.showBusy();
+	                        }
+	                    }
+	                ]
+	            })
+	        },
+        	contentPanel
+        ],
+        renderTo: Ext.getBody()
+    });
+});

@@ -1,0 +1,42 @@
+
+.nuevo{background-image: url( ../img/icons/nuevo.png) !important; }
+.bitacora{background-image: url( ../img/icons/bitacora.png) !important; }
+.flujo{background-image: url( ../img/icons/flujo.png) !important; }
+.parametros{background-image: url( ../img/icons/parametros.png) !important; }
+.agenvirtual{background-image: url( ../img/icons/agenvirtual.png) !important; }
+.notas{background-image: url( ../img/icons/notas.png) !important; }
+.banpreguntas{background-image: url( ../img/icons/banpreguntas.png) !important; }
+.evaluaciones{background-image: url( ../img/icons/evaluaciones.png) !important; }
+.repuestos{background-image: url( ../img/icons/repuestos.png) !important; }
+.matricula{background-image: url( ../img/icons/matricula.png) !important; }
+.calescolar{background-image: url( ../img/icons/calescolar.png) !important; }
+.reportes{background-image: url( ../img/icons/reportes.png) !important; }
+.etiquetas{background-image: url( ../img/icons/etiquetas.png) !important; }
+.manmestros{background-image: url( ../img/icons/manmestros.png) !important; }
+.operaciones{background-image: url( ../img/icons/operaciones.png) !important; }
+.permiseguridad{background-image: url( ../img/icons/permiseguridad.png) !important; }
+.noticias{background-image: url( ../img/icons/noticias.png) !important; }
+.administracion{background-image: url( ../img/icons/administracion.png) !important; }
+.cerrar{background-image: url( ../img/icons/cerrar.png) !important; }
+
+.visualizar{background-image: url( ../img/icons/magnifier.png) !important; }
+.buscar{background-image: url( ../img/icons/buscar.png) !important; }
+.filtro{background-image: url( ../img/icons/filtro.gif) !important; }
+.filtro_quitar{background-image: url( ../img/icons/filtro_quitar.gif) !important; }
+.actualizar{background-image: url( ../img/icons/actualizar.png) !important; }
+.aplicar{background-image: url( ../img/icons/aplicar.png) !important; }
+.agregar{background-image: url( ../img/icons/agregar.png) !important; }
+.generar{background-image: url( ../img/icons/generar.png) !important; }
+.guardar{background-image: url( ../img/icons/guardar.png) !important; }
+.limpiar{background-image: url( ../img/icons/limpiar.png) !important; }
+.global{background-image: url( ../img/icons/global.png) !important; }
+
+.listado{background-image: url( ../img/icons/application_view_list.png) !important; }
+
+.check_ok{background-image: url( ../img/icons/check_ok.png); background-repeat: no-repeat !important; }
+.info{background-image: url( ../img/icons/info.png) !important; background-repeat: no-repeat; }
+
+.cancelar{background-image: url( ../img/icons/cancelar.png) !important; }
+
+.eliminar{background-image: url( ../img/icons/eliminar.png) !important; }
+.logogm{background-image: url( ../img/icons/logogmpng.png) !important; }

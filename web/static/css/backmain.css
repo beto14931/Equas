@@ -1,0 +1,72 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	color: #555;
+	font: normal 10pt Arial,Helvetica,sans-serif;
+	background: #EFEFEF;
+}
+
+.pregunta {
+	background:url('../img/pregunta.png') no-repeat;
+}
+
+.marcar {
+	background:url('../img/marcar.png') no-repeat;
+}
+
+.salir {
+	background:url('../img/salir.png') no-repeat;
+}
+
+.alumno {
+	background:url('../img/alumno.png') no-repeat;
+}
+
+.actualizar {
+	background:url('../img/actualizar.png') no-repeat;
+}
+
+.agregar {
+	background:url('../img/agregar.png') no-repeat;
+}
+
+.expandir {
+	background:url('../img/expandir.png') no-repeat;
+}
+
+.colapsar {
+	background:url('../img/colapsar.png') no-repeat;
+}
+
+.abrir {
+	background:url('../img/abrir.png') no-repeat;
+}
+
+.home {
+	background:url('../img/home.png') no-repeat;
+}
+
+.guardar {
+	background:url('../img/guardar.png') no-repeat;
+}
+
+.cambiarCargo {
+	background:url('../img/cambiarCargo.png') no-repeat;
+}
+
+.actualizarCargo {
+	background:url('../img/actualizarCargo.png') no-repeat;
+}
+
+.cerrar {
+	background:url('../img/cerrar.png') no-repeat;
+}
+
+.usuario {
+	background:url('../img/usuario.png') no-repeat;
+}
+
+.horario {
+	background:url('../img/horario.png') no-repeat;
+}

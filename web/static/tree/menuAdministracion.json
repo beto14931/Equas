@@ -1,0 +1,36 @@
+{
+    "text": ".",
+    "children": [
+                {
+                    "id": "",
+                    "text": "1. Clientes ",
+                    "iconCls": "task",
+                    "leaf": true
+                },{
+                    "id": "",
+                    "text": "2. Productos",
+                    "iconCls": "task",
+                    "leaf": true
+                },{
+                    "id": "",
+                    "text": "3. Perfil",
+                    "iconCls": "task",
+                    "leaf": true
+                },{
+                    "id": "frmRegistrarParametro",
+                    "text": "4. Parametros",
+                    "iconCls": "task",
+                    "leaf": true
+                },{
+                    "id": "",
+                    "text": "5. Tipo de Muestra",
+                    "iconCls": "task",
+                    "leaf": true
+                },{
+                    "id": "",
+                    "text": "6. Reglas de Negocio",
+                    "iconCls": "task",
+                    "leaf": true
+                }
+    ]
+}

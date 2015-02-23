@@ -1,0 +1,21 @@
+{
+    "text": ".",
+    "children": [
+                {
+                    "id": "frmRegistrarLote",
+                    "text": "1. Registro de Lote ",
+                    "iconCls": "task",
+                    "leaf": true
+                },{
+                    "id": "frmReservarLote",
+                    "text": "2. Reservar Lote",
+                    "iconCls": "task",
+                    "leaf": true
+                },{
+                    "id": "frmBuscarLote",
+                    "text": "3. Buscar Lote",
+                    "iconCls": "task",
+                    "leaf": true
+                }
+    ]
+}

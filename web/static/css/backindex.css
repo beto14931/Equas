@@ -1,0 +1,633 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }
+
+/* remember to define focus styles! */
+:focus { outline: 0; }
+
+
+body {
+    font-family: Tahoma, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: #fff;
+    border: 0px #000 solid;
+    overflow-y: scroll;
+}
+
+.search .glass i {
+    position: relative;
+    background-image: url("../img/sprite-icons.png");
+    background-position: -256px -96px;
+    display: block;
+    font-size: 0;
+    height: 14px;
+    width: 14px;
+}
+
+.search .glass {
+    background: none repeat scroll 0 0 transparent;
+    cursor: pointer;
+    display: block;
+    left: 304px;
+    position: relative;
+    top: -30px;
+}
+
+.button {
+    background: url("../img/bg-btn.gif") repeat-x scroll 0 0 #DDDDDD;
+    border-color: #BBBBBB #BBBBBB #999999;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    border: medium none;
+    box-shadow: none;
+    color: #333333 !important;
+    cursor: pointer;
+    display: inline;
+    font: 12px/15px Helvetica Neue,Arial,"Lucida Grande",Sans-serif;
+    margin: 0;
+    overflow: hidden;
+    padding: 5px 9px;
+    text-shadow: 0 1px #F0F0F0;
+}
+
+.holding {
+    overflow: visible;
+    position: relative;
+}
+
+.holding input {
+    -moz-transition: opacity 0.1s ease 0s, font-size 0.1s ease 0s;
+    -moz-user-select: none;
+    background-color: white;
+    border: medium none !important;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2) inset;
+    color: #007700;
+    opacity: 0.7;
+}
+
+.holding:hover .holder {
+    display: none;
+}
+
+.holding .holder {
+    color: #555555;
+    line-height: 36px;
+    padding-left: 6px;
+    -moz-transition: opacity 0.1s ease 0s, font-size 0.1s ease 0s;
+    -moz-user-select: none;
+    color: #999999;
+    cursor: text;
+    left: 8px;
+    position: absolute;
+    display: inline;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    top: 0;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.holding input:focus + span.holder {
+    opacity: 0.6;
+}
+
+.search input {
+    font: 15px "Helvetica Neue",Arial,sans-serif;
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.6);
+    border-radius: 40px 40px 40px 40px;
+    width: 314px;
+    border: 1px solid #30607D;
+    box-shadow: 0 1px 0 #EEEEEE inset, 0 1px 0 rgba(255, 255, 255, 0.2);
+    color: #333333;
+    font-family: 'Helvetica Neue',Arial,sans-serif;
+    font-size: 17px;
+    padding: 8px 10px;
+}
+
+.search input:hover, .search input:focus, .search input.focused, .search input.actasfocused {
+    box-shadow: 0 1px 0 #EEEEEE inset, 0 1px 0 rgba(255, 255, 255, 0.2), 0 0 8px rgba(75, 27, 0, 0.9);
+    outline: medium none;
+}
+
+
+#headmain {
+    background-color: #6B1B00;
+    height: 82px;
+    direction: ltr;
+    margin: 0 auto;
+}
+
+#capahead {
+    text-align: left;
+    background-color: #6B1B00;
+    padding-left: 10px;
+    padding-top: 21px;
+    width: 916px;
+}
+
+#capabody {
+    background-color: #FFD1DA;
+    height: 500px; 
+}
+
+#innerbody{
+    text-align: right;
+    background-color: #FFD1DA;
+    padding-left: 10px;
+    padding-top: 20px;
+    width: 916px;
+    height: 480px; 
+}
+
+#loginbody{
+    text-align: left;
+    background-color: #FFD1DA;
+    padding-left: 10px;
+    padding-top: 20px;
+    width: 466px;
+    height: 460px; 
+}
+
+#footmain {
+    background-color: #fff;
+    height: 102px;
+    direction: ltr;
+    margin: 0 auto;
+}
+
+#footbody {
+    text-align: left;
+    font-family: Tahoma, sans-serif;
+    font-size: 11px;
+    color: #333;
+    background-color: #fff;
+    padding-left: 10px;
+    padding-top: 5px;
+    width: 916px;
+    height: 30px; 
+    border-bottom-width:1px;
+    border-bottom-style:dotted;
+    border-bottom-color:#6B1B00;
+}
+
+#footbody2 {
+    text-align: left;
+    font-family: Tahoma, sans-serif;
+    font-size: 11px;
+    color: #333;
+    background-color: #fff;
+    padding-left: 10px;
+    padding-top: 5px;
+    width: 916px;
+    height: 82px; 
+}
+
+h2 {
+	font-size: 12px;
+	color: #BED9EA;
+	font-family: "Trebuchet MS";
+	text-align: left
+}
+
+h4 {
+	font-size: 8px;
+	color: #BED9EA;
+	font-family: Verdana;
+	text-align: left
+}
+
+.txt-form {
+	padding: 25px;
+}
+
+a {
+	color: #15428B;
+}
+
+a:link,a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.item-menu:hover {
+	border: 1px dotted #22adad;
+	text-decoration: underline;
+	color: #444;
+	cursor: pointer;
+	padding-top: 9px !important;
+	height: 20px !important;
+	background-color: #aacdcd !important;
+}
+
+#header h1 {
+	font-size: 20px;
+	color: #EEEEEE;
+	font-family: Arial;
+	text-align: left;
+}
+
+#start-div h2 {
+	font-size: 12px;
+	color: #555;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #C3D0DF;
+}
+
+#start-div p {
+	margin: 10px 0;
+}
+
+#details-panel h2 {
+	padding: 10px 10px 0;
+	font-size: 12px;
+	color: #15428B;
+}
+
+#details-panel p {
+	padding: 10px 10px 0;
+}
+
+#details-panel pre {
+	border-top: 1px dotted #ddd;
+	border-bottom: 1px dotted #ddd;
+	margin-top: 10px;
+	padding: 0 5px;
+	background: #F5F5F5;
+}
+
+#details-panel .details-info {
+	margin: 15px;
+	padding: 15px;
+	border: 1px dotted #999;
+	color: #555;
+	background: #F9F9F9;
+}
+
+/*===================================
+/*   Customized layout styles
+/*===================================*/
+table.x-table-lista {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table.x-table-lista tr {
+	border: 1px solid #ccc;
+}
+
+table.x-table-lista td a {
+	display: block;
+	font-size: 10px;
+	padding: 3px;
+	text-decoration: none;
+	height: 70px;
+}
+
+table.x-table-lista td a:link,table.x-table-lista td a:visited {
+	color: #000;
+	background-color: #fff;
+}
+
+table.x-table-lista td a:hover,table.x-table-lista td a:active {
+	color: #000;
+	background-color: #CCFFCC;
+	text-decoration: none;
+}
+
+/* Remove the border around the tabs and override the default white background: */
+.x-tab-panel-header-plain .x-tab-strip-top {
+	background: #DFE8F6 url(../images/default/tabs/tab-strip-bg.gif)
+		repeat-x scroll center bottom !important;
+}
+
+.x-plain {
+	height: 100%;
+}
+
+.x-panelc {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.x-date-right,.x-date-left {
+	height: 16px;
+}
+
+.x-date-right a {
+	float: right;
+}
+
+.x-date-tag {
+	background: #FF0000;
+}
+
+.x-date-free {
+	background: #00FF00;
+}
+
+.x-date-dispo {
+	background: #98FB98;
+}
+
+/* Custom CSS applied to a single panel in an accordion: */
+.custom-accordion .x-panel-body {
+	font-family: Georgia, serif;
+	padding: 20px 80px !important;
+	background: #FFE;
+	font-size: 18px;
+	text-align: center;
+	color: #15428B;
+}
+
+.custom-accordion .x-panel-header-text {
+	font-weight: bold;
+	font-style: italic;
+	color: #555;
+}
+
+/* Custom style for the FormLayout footer so that it integrates into the border layout nicely: */
+#form-panel .x-panel-footer {
+	background: #DFE8F6;
+	border-color: #99BBE8;
+	border-style: none solid solid;
+	border-width: 0pt 1px 1px;
+}
+
+/* Customize the TableLayout html using standard CSS rules: */
+#table-panel .x-table-layout {
+	padding: 5px;
+}
+
+#table-panel .x-table-layout td {
+	vertical-align: top;
+	padding: 5px;
+	font-size: 11px;
+}
+
+.msg .x-box-mc {
+	font-size: 14px;
+}
+
+#msg-div {
+	position: absolute;
+	left: 35%;
+	top: 10px;
+	width: 250px;
+	z-index: 20000;
+}
+
+/* Toolbar icons for absolute form example: */
+.x-btn-bigicon .x-btn-center .x-btn-text {
+	background-image: url(../img/aceptar32.png) !important;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 32px;
+	width: 32px;
+	cursor: pointer;
+	white-space: nowrap;
+	padding: 0;
+}
+
+/* Custom rule to make the toolbar fit within a framed panel with no margin: */
+.email-form .x-panel-mc .x-panel-tbar .x-toolbar {
+	border-top: 1px solid #C2D6EF;
+	border-left: 1px solid #C2D6EF;
+	border-bottom: 1px solid #99BBE8;
+	margin: -5px -4px 0;
+}
+
+/* Custom styles for the "Tabs with nested layouts" example: */
+.inner-tab-custom .x-border-layout-ct {
+	background: #FFF;
+}
+
+/*===================================
+/*  Rules for custom ux layouts
+/*====================================*/
+/* 
+ * Ext.ux.layout.CenterLayout
+ */
+.ux-layout-center-item {
+	margin: 0 auto;
+	text-align: left;
+}
+
+.ux-layout-center .x-panel-body, /* if the container is a panel */ body.ux-layout-center
+	{ /* if the container is the doc body (for viewport) */
+	text-align: center;
+}
+
+/* Other styles */
+#container {
+	width: 600px;
+	height: 300px;
+	border: 3px solid #C3DAF9;
+}
+
+.menu-title {
+	background: #EBEADB
+		url(../../resources/images/default/grid/grid3-hrow.gif) repeat-x;
+	border-bottom: 1px solid #99BBE8;
+	color: #15428B;
+	font: bold 10px Tahoma, Arial, Verdana, sans-serif;
+	display: block;
+	padding: 3px;
+}
+
+.align-right .x-form-item {
+	text-align: right;
+	padding-right: 25px;
+}
+
+.align-right label {
+	text-align: left;
+}
+
+/* Estilos para impresi贸n */
+#divReporte {
+	display: none;
+}
+
+.page-break {
+	display: none;
+}
+
+.x-view-over {
+	border: 1px solid #dddddd;
+	background: #efefef
+		url(../../resources/images/default/grid/row-over.gif) repeat-x left
+		top;
+	padding: 3px;
+	cursor: pointer;
+}
+
+#panelBandeja {
+	
+}
+
+#panelBandeja dd {
+	float: left;
+	width: 300px;
+	height: 100px;
+	margin: 5px 5px 5px 10px;
+	padding: 5px 5px 0px 0px;
+	cursor: pointer;
+	/*zoom:1;*/
+}
+
+#panelBandeja dd img {
+	width: 120px;
+	height: 90px;
+	margin: 5px 0 0 5px;
+	float: left;
+}
+
+#panelBandeja dd div {
+	float: left;
+	width: 160px;
+	margin-left: 10px;
+}
+
+#panelBandeja dd h4 {
+	font-family: tahoma, arial, san-serif;
+	color: #555;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+#panelBandeja dd p {
+	color: #777;
+}
+
+#panelBandeja dd.over {
+	background: #DFDFDF url(../img/sample-over.gif) no-repeat;
+}
+
+#loading-mask {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 20000;
+	background-color: white;
+}
+
+#loading {
+	position: absolute;
+	left: 45%;
+	top: 40%;
+	padding: 2px;
+	z-index: 20001;
+	height: auto;
+}
+
+#loading a {
+	color: #225588;
+}
+
+#loading .loading-indicator {
+	background: white;
+	color: #444;
+	font: bold 13px tahoma, arial, helvetica;
+	padding: 10px;
+	margin: 0;
+	height: auto;
+}
+
+#loading-msg {
+	font: normal 10px arial, tahoma, sans-serif;
+}
+
+#panelBandeja .x-panel-body {
+	background-color: #fff;
+	border: 1px solid;
+	border-color: #fafafa #fafafa #fafafa #fafafa;
+}
+
+#sample-ct {
+	border: 1px solid;
+	border-color: #dadada #ebebeb #ebebeb #dadada;
+	padding: 2px;
+}
+
+#panelBandeja h2 {
+	border-bottom: 2px solid #99bbe8;
+	cursor: pointer;
+	padding-top: 6px;
+}
+
+#panelBandeja h2 div {
+	background: transparent url(../img/group-expand-sprite.gif) no-repeat
+		3px -47px;
+	padding: 4px 4px 4px 17px;
+	color: #3764a0;
+	font: bold 11px tahoma, arial, helvetica, sans-serif;
+}
+
+#panelBandeja .collapsed h2 div {
+	background-position: 3px 3px;
+}
+
+#panelBandeja .collapsed dl {
+	display: none;
+}
+
+.x-window {
+	text-align: left;
+}
+
+#panelBandeja dd h4 span.new-sample {
+	color: red;
+}
+
+#panelBandeja dd h4 span.updated-sample {
+	color: blue;
+}
+
+.item-disabled {
+	/*cursor: default;*/
+    filter:none;  
+    color: black !important;    
+	-moz-opacity: 100;
+    opacity: 1; 
+}
+
+#panelHelp-xcollapsed {
+	background-color: #D2E0F2;
+	border-color: #98C0F4;
+	background-image: url(../img/bckayuda.png) !important;
+	background-repeat: no-repeat;
+}
+
+#leftMenu-xcollapsed {
+	background-color: #D2E0F2;
+	border-color: #98C0F4;
+	background-image: url(../img/bcksidebar.png) !important;
+	background-repeat: no-repeat;
+}
+
+.rmoney .x-form-field {
+	text-align: right;
+}
+
+.lmoney .x-form-field {
+	text-align: left;
+}
+
+.x-grid3-hd-row {
+text-align: center;
+}

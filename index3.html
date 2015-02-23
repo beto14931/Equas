@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+	<div class="row-fluid">
+      <form class="form-horizontal">
+        <fieldset>
+          <div id="legend">
+            <legend class="">Proceso de pago</legend>
+          </div>
+     
+          <!-- Name -->
+          <div class="control-group">
+            <label class="control-label"  for="namecard">Nombre en la tarjeta</label>
+            <div class="controls">
+              <input type="text" id="namecard" name="namecard" placeholder="Ingresa tu nombre..." class="input-xlarge">
+            </div>
+          </div>
+     
+          <!-- Card Number -->
+          <div class="control-group">
+            <label class="control-label" for="numbercard">Numero de la tarjeta</label>
+            <div class="controls">
+              <input type="text" id="numbercard" name="numbercard" placeholder="Ingresa el nuemero de tarjeta" class="input-xlarge">
+            </div>
+          </div>
+     
+
+
+          <!-- Expiry-->
+          <div class="control-group">
+            <label class="control-label" for="numbercard">Fecha de expiración</label>
+            <div class="controls">
+              <select class="span3" name="expiry_month" id="expiry_month">
+                <option></option>
+                <option value="01">Ene (01)</option>
+                <option value="02">Feb (02)</option>
+                <option value="03">Mar (03)</option>
+                <option value="04">Abr (04)</option>
+                <option value="05">May (05)</option>
+                <option value="06">Jun (06)</option>
+                <option value="07">Jul (07)</option>
+                <option value="08">Ago (08)</option>
+                <option value="09">Set (09)</option>
+                <option value="10">Oct (10)</option>1
+                <option value="11">Nov (11)</option>
+                <option value="12">Dic (12)</option>
+              </select>
+              <select class="span2" name="expiry_year">
+                <option value="13">2013</option>
+                <option value="14">2014</option>
+                <option value="15">2015</option>
+                <option value="16">2016</option>
+                <option value="17">2017</option>
+                <option value="18">2018</option>
+                <option value="19">2019</option>
+                <option value="20">2020</option>
+                <option value="21">2021</option>
+                <option value="22">2022</option>
+                <option value="23">2023</option>
+              </select>
+            </div>
+          </div>
+     
+          <!-- CVV -->
+          <div class="control-group">
+            <label class="control-label"  for="cvvcode">Codigo CVV</label>
+            <div class="controls">
+              <input type="password" id="cvvcode" name="cvvcode" placeholder="Ingresa el codigo CCV" class="span2">
+            </div>
+          </div>
+     
+          <!-- Save card -->
+          <div class="control-group">
+            <div class="controls">
+              <label class="checkbox" for="save_card">
+                <input type="checkbox" id="save_card" value="option1">
+                Guardar tarjeta para un próximo uso?
+              </label>
+            </div>
+          </div>
+     
+
+        </fieldset>
+      </form>
+    </div>
+</div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

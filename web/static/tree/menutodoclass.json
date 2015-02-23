@@ -1,0 +1,46 @@
+{
+    "text": ".",
+    "children": [
+                {
+                    "id": "frmRegistrarLote",
+                    "text": "1. Registro de Lote ",
+                    "iconCls": "task",
+                    "leaf": true
+                },{
+                    "id": "",
+                    "text": "2. Panel de Clientes",
+                    "iconCls": "task",
+                    "leaf": true
+                },{
+                    "id": "",
+                    "text": "3. Registrar Codigos de Laboratorio",
+                    "iconCls": "task",
+                    "leaf": true
+                },{
+                    "id": "frmRegistrarParametro",
+                    "text": "4. Registro de parametros",
+                    "iconCls": "task",
+                    "leaf": true
+                },{
+                    "id": "",
+                    "text": "5. WIP",
+                    "iconCls": "task",
+                    "leaf": true
+                },{
+                    "id": "",
+                    "text": "6. Hojas de Ensayo",
+                    "iconCls": "task",
+                    "leaf": true
+                },{
+                    "id": "",
+                    "text": "7. Reportes",
+                    "iconCls": "task",
+                    "leaf": true
+                },{
+                    "id": "",
+                    "text": "8. Configuracion",
+                    "iconCls": "task",
+                    "leaf": true
+                }
+    ]
+}
